@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src = "ue4object.js"></script>
+    <script src = "Button.js"></script>
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body style="text-align: right;">
+
+    <p id="title"></p>
+    <button id="GDSDK-Config" type="button">加载服务</button>
+    <button id="button2" type="button">隐藏</button>
+    <button id="button3" type="button">按钮三</button>
+    <button id="button4" type="button">按钮四</button>
+    <button id="button5" type="button">按钮五</button>
+	<button id="button6" type="button">按钮六</button>
+	<button id="button7" type="button">刷新</button>
+	<button id="button8" type="button">隐藏二</button>
+	<button id="button9" type="button"style="position: fixed; bottom: 50px; right: 50px;">刷新按钮</button>
+	
+	 <div id="app">
+	    <el-row class="block-col-2">
+	      <el-col :span="12">
+	        <el-dropdown trigger="click">
+	          <span class="el-dropdown-link" style="color: #fff; background:#000; padding:10px;border-radius:6px">
+	            下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+	          </span>
+	          <el-dropdown-menu slot="dropdown">
+	            <el-dropdown-item id="GDSDK-LayerManager" icon="el-icon-plus">图层管理</el-dropdown-item>
+	            <el-dropdown-item id="GDSDK-AddLayer" icon="el-icon-circle-plus">添加图层</el-dropdown-item>
+	            <el-dropdown-item id="GDSDK-ModelAttribute" icon="el-icon-circle-plus-outline">场景属性</el-dropdown-item>
+	            <el-dropdown-item id="GDSDK-SceneClip" icon="el-icon-check">场景裁剪</el-dropdown-item>
+	            <!-- <el-dropdown-item id="GDSDK-ContourMap" icon="el-icon-circle-check">等值线（地形）</el-dropdown-item> -->
+				<el-dropdown-item id="GDSDK-SpatialAnalysis" icon="el-icon-circle-check">通视分析</el-dropdown-item>
+				<el-dropdown-item id="GDSDK-ViewShed" icon="el-icon-circle-check">可视域分析</el-dropdown-item>
+				<el-dropdown-item id="GDSDK-Skyline" icon="el-icon-circle-check">天际线分析</el-dropdown-item>
+				<el-dropdown-item id="GDSDK-MeasureHandler" icon="el-icon-circle-check">量算</el-dropdown-item>
+				<el-dropdown-item id="GDSDK-Position" icon="el-icon-circle-check">坐标查询</el-dropdown-item>
+				<el-dropdown-item id="GDSDK-AnalyzeTool" icon="el-icon-circle-check">色彩分析</el-dropdown-item>
+	          </el-dropdown-menu>
+	        </el-dropdown>
+	      </el-col>
+	    </el-row>
+	  </div>
+	</body>
+	  <!-- import Vue before Element -->
+	  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+	  <!-- import JavaScript -->
+	  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	  <script>
+	    new Vue({
+	      el: '#app',
+	      data: function() {
+	        return {  }
+	      }
+	    })
+	  </script>
+	  <style>
+	    .el-dropdown-link {
+	      cursor: pointer;
+	      color: #409EFF;
+	    }
+	    .el-icon-arrow-down {
+	      font-size: 12px;
+	    }
+	    .demonstration {
+	      display: block;
+	      color: #8492a6;
+	      font-size: 14px;
+	      margin-bottom: 20px;
+	    }
+	  </style>
+</body>
+</html>
